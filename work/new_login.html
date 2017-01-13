@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new_login</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.gradient{
+	background: -moz-linear-gradient(top, #EA0081 0%, #B30E6A 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EA0081), color-stop(100%,#B30E6A));
+    background: -webkit-linear-gradient(top, #EA0081 0%,#B30E6A 100%);
+    background: -o-linear-gradient(top, #EA0081 0%,#B30E6A 100%);
+    background: -ms-linear-gradient(top, #EA0081 0%,#B30E6A 100%);
+    background: linear-gradient(to bottom, #EA0081 0%,#B30E6A 100%);
+}
+html,body,.box{
+	width:100%;
+	height:100%;
+}
+.box{
+	background: url("img/bj.jpg") no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+.container{
+	position: absolute;
+	background: url("img/log.png") no-repeat;
+	background-size: 100% 100%;
+}
+.like{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+}
+input{
+	width:100%;
+	display: block;
+	border-radius:20px;
+	border:1px solid #7299FF;
+	background: none;
+	outline: none;
+	position:absolute;
+	top:0;
+	padding-left:50px;
+	color:#fff;
+}
+input[type=button]{
+	padding:0;
+    border:none;
+}
+.icon{
+	position: absolute;
+}
+.test{
+    position: absolute;
+    color:#C7046D;
+    margin-top:8px;
+}
+.r_l{
+	position: absolute;
+	width:100%;
+	bottom:36px;
+	left:0;
+	padding:0 33px;
+	display:-webkit-box;
+}
+.r_l span{
+	color:#C7046D;
+	margin-left:6px;
+	cursor: pointer;
+}
+.r_l p{
+	width:50%;
+	color:#fff;
+	font-size: 13px;
+}
+</style>
+<body>
+<div class="box">
+	<div class="container">
+		<div class="like login">
+			<div style="position:relative;margin-bottom:25px;" class="input_box">
+				<span class="glyphicon glyphicon-envelope" style="color:#fff;top:5px;left:15px;font-size:12px" class="icon"></span>
+				<input type="text">
+				<p class="test">邮箱格式不正确！</p>
+			</div>
+			<div style="position:relative;margin-bottom:25px;">
+				<span class="glyphicon glyphicon-lock" style="color:#fff;top:2px;left:15px;font-size:12px" class="icon"></span>
+				<input type="password">
+				<p class="test">邮箱格式不正确！</p>
+			</div>
+			<div style="position:relative;top:30px;">
+				<input type="button" value="登陆" class="gradient">
+			</div>
+			<div class="r_l">
+				<p style="text-align:left">忘记密码？<span>找回</span></p>
+				<p style="text-align:right">还没注册？<span>注册</span></p>
+			</div>
+		</div>
+		<div class="like register" style="display:none"></div>
+		<div class="like lose" style="display:none"></div>
+	</div>
+</div>
+</body>
+</html>
+<script src="../js/jquery.min.js"></script>
+<script>
+var w = document.documentElement.clientWidth,
+	h = document.documentElement.clientHeight,
+	_w = 2300/1920,
+	_h = 1438/974;
+$(".container").css({
+	"width": 441/_w+"px",
+	"height": 552/_w+"px",
+	"right": 330/_w+"px",
+	"top": 364/_h+"px"
+})
+$(".like").css({
+	"padding": "0 "+70/_w+"px",
+	"padding-top": 220/_w+"px"
+})
+$("input").css({
+	"height": 31/_w+"px"
+})
+$(".input_box").css({
+	"height": 31/_w+"px"
+})
+//h ==974   w= 1920  img = 2300 / 1438
+//
+</script>
